@@ -81,7 +81,8 @@ async def _run_async(
     )
     audio_path = run_dir / "narration.mp3"
     try:
-        await tts.synthesize(script.body, audio_path)
+        timeout_sec = float(voice_cfg.get("timeout_sec", 60))
+        await asyncio.wait_for(tts.synthesize(script.body, audio_path), timeout=timeout_sec)
     except Exception as e:  # noqa: BLE001
         log.warning("Voice generation failed (%s). Falling back to silent audio.", e)
         est = _estimate_duration_from_text(script.body)

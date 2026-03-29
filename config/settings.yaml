@@ -9,6 +9,7 @@ voice:
   voice: en-US-JennyNeural
   rate: "+0%"
   volume: "+0%"
+  timeout_sec: 60
 
 caption:
   font_name: "DejaVu Sans"
@@ -31,4 +32,3 @@ output:
 
 logging:
   level: "INFO"
-
