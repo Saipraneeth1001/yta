@@ -1,0 +1,34 @@
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+  format: mp4
+
+voice:
+  provider: edge_tts
+  voice: en-US-JennyNeural
+  rate: "+0%"
+  volume: "+0%"
+
+caption:
+  font_name: "DejaVu Sans"
+  font_size: 48
+  color: "&H00FFFFFF"         # ASS/libass format (AABBGGRR); alpha=00 is opaque
+  outline_color: "&H00000000"
+  outline: 3
+  shadow: 0
+  alignment: 2                # 2 = bottom-center
+  margin_v: 120
+
+media:
+  provider: pexels
+  clip_duration_sec: 3
+  clip_count: 6
+
+output:
+  filename_template: "{slug}_{timestamp}.mp4"
+  overwrite: false
+
+logging:
+  level: "INFO"
+

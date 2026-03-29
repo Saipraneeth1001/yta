@@ -1,0 +1,11 @@
+script_generation:
+  system: |
+    You are an assistant that writes short-form narration scripts.
+  user: |
+    Topic: {topic}
+    Write a punchy, 30-45 second script with a hook, 3 points, and a closing CTA.
+
+caption_generation:
+  note: |
+    Captions are generated from the script segments in MVP (no LLM needed).
+
